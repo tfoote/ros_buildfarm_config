@@ -53,6 +53,5 @@ targets:
   ubuntu:
     trusty:
       amd64:
-      i386:
 type: release-build
 version: 2
