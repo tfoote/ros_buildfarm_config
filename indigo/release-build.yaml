@@ -46,6 +46,8 @@ repositories:
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
   - http://repo/ubuntu/building
+tag_whitelist:
+- custom_distro
 target_repository: http://repo/ubuntu/building
 targets:
   ubuntu:
