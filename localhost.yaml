@@ -5,8 +5,8 @@ distributions:
   indigo:
     release_builds:
       Ubu: indigo/release-build.yaml
-#    source_builds:
-#      T64: indigo/source-build.yaml
+    source_builds:
+      T64: indigo/source-build.yaml
 jenkins_url: http://master:8080/
 notification_emails:
   - tfoote+buildfarm@osrfoundation.org
