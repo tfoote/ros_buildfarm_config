@@ -7,12 +7,12 @@ distributions:
       Ubu: indigo/release-build.yaml
     source_builds:
       T64: indigo/source-build.yaml
-jenkins_url: http://ec2-54-67-100-136.us-west-1.compute.amazonaws.com:8080/
+jenkins_url: http://54.67.63.99:8080/
 notification_emails:
   - tfoote+buildfarm@osrfoundation.org
 prerequisites:
   debian_repositories:
-  - http://ec2-54-67-45-190.us-west-1.compute.amazonaws.com/ubuntu/building
+  - http://54.67.126.25/ubuntu/building
   debian_repository_keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
