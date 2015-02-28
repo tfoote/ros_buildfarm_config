@@ -1,18 +1,16 @@
 %YAML 1.1
-# ROS buildfarm release-build file
+# ROS buildfarm doc-build file
 ---
-abi_incompatibility_assumed: true
-jenkins_binary_job_priority: 83
-jenkins_binary_job_timeout: 120
-jenkins_source_job_priority: 81
-jenkins_source_job_timeout: 30
+canonical_base_url: http://repo/docs
+documentation_type: rosdoc_lite
+jenkins_job_priority: 91
+jenkins_job_timeout: 60
 notifications:
+  committers: false
   emails:
   - dthomas+buildfarm@osrfoundation.org
   - tfoote+buildfarm@osrfoundation.org
   maintainers: false
-sync:
-  package_count: 1300
 repositories:
   keys:
   - |
@@ -47,12 +45,11 @@ repositories:
     =E8ot
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
-  - http://repo/ubuntu/building
-target_repository: http://repo/ubuntu/building
+  - http://repo/ubuntu/testing
 targets:
   ubuntu:
     trusty:
       amd64:
-type: release-build
+type: doc-build
 upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
 version: 2

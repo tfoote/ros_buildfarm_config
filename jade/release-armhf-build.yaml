@@ -2,17 +2,17 @@
 # ROS buildfarm release-build file
 ---
 abi_incompatibility_assumed: true
-jenkins_binary_job_priority: 83
-jenkins_binary_job_timeout: 120
-jenkins_source_job_priority: 81
+jenkins_binary_job_priority: 82
+jenkins_binary_job_timeout: 600
+jenkins_source_job_priority: 80
 jenkins_source_job_timeout: 30
 notifications:
   emails:
   - dthomas+buildfarm@osrfoundation.org
-  - tfoote+buildfarm@osrfoundation.org
+  - william+buildfarm@osrfoundation.org
   maintainers: false
 sync:
-  package_count: 1300
+  package_count: 140
 repositories:
   keys:
   - |
@@ -47,12 +47,12 @@ repositories:
     =E8ot
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
-  - http://repo/ubuntu/building
-target_repository: http://repo/ubuntu/building
+  - http://54.183.65.232/ubuntu/building
+target_repository: http://54.183.65.232/ubuntu/building
 targets:
   ubuntu:
     trusty:
-      amd64:
+      armhf:
 type: release-build
 upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
 version: 2
