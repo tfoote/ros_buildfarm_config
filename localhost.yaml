@@ -3,11 +3,31 @@
 ---
 distributions:
   indigo:
+    doc_builds:
+      default: indigo/doc-build.yaml
+      released-packages-without-doc-job: indigo/doc-released-build.yaml
+    notification_emails:
+    - dthomas+buildfarm@osrfoundation.org
+    - tfoote+buildfarm@osrfoundation.org
     release_builds:
-      Ubu: indigo/release-build.yaml
-#    source_builds:
-#      T64: indigo/source-build.yaml
-jenkins_url: http://master:8080/
+      arm: indigo/release-armhf-build.yaml
+      default: indigo/release-build.yaml
+    source_builds:
+      default: indigo/source-build.yaml
+  jade:
+    doc_builds:
+      default: jade/doc-build.yaml
+    notification_emails:
+    - dthomas+buildfarm@osrfoundation.org
+    - william+buildfarm@osrfoundation.org
+    release_builds:
+      arm: jade/release-armhf-build.yaml
+      default: jade/release-build.yaml
+    source_builds:
+      default: jade/source-build.yaml
+doc_builds:
+  independent-packages: doc-independent-build.yaml
+jenkins_url: http://master:8080
 notification_emails:
   - tfoote+buildfarm@osrfoundation.org
 prerequisites:
@@ -46,5 +66,10 @@ prerequisites:
     =E8ot
     -----END PGP PUBLIC KEY BLOCK-----
 rosdistro_index_url: https://raw.githubusercontent.com/tfoote/rosdistro/test_deployment/index.yaml
+status_page_repositories:
+  default:
+  - http://repo/ubuntu/building
+  - http://repo/ubuntu/testing
+  - http://repo/ubuntu/main
 type: buildfarm
 version: 1
